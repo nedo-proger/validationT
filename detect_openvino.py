@@ -199,6 +199,35 @@
 # print("Детекция завершена!")
 
 
+# создание coco128.yalm
+import yaml
+
+# Создание конфигурационного файла coco128.yaml
+
+import os
+import yaml
+
+# Получаем абсолютные пути
+train_path = os.path.abspath("./coco128/images")
+val_path = os.path.abspath("./coco128/labels")  # Измените, если у вас есть отдельный набор данных для валидации
+
+# Создание конфигурационного файла coco128.yaml
+text = f""" 
+# YOLOv7 конфигурация
+train: {train_path}
+val: {val_path}
+nc: 80
+names: ["cattle", "fallen_tree", "human", "power_line", "tractor"]
+"""
+
+# Создание файла coco128.yaml
+with open("coco128.yaml", "w") as f:
+    f.write(text)
+
+print("Файл coco128.yaml создан с абсолютными путями.")
+
+
+
 
 
 

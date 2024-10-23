@@ -25,3 +25,6 @@ tools/
 traced_model.pt
 train/
 LICENSE.md
+
+coco128/
+__pycache__/

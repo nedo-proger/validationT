@@ -1,0 +1,6 @@
+
+# YOLOv7 конфигурация
+train: D:\pyBot\detector2\pythonProject\coco128\images
+val: D:\pyBot\detector2\pythonProject\coco128\labels
+nc: 80
+names: ["cattle", "fallen_tree", "human", "power_line", "tractor"]
